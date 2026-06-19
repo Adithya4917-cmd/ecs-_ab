@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap');
+body{
+    background-color: rgb(255, 255, 255);
+    /*Segoe UI Variable Small Semibol
+    Gill Sans Ultra Bold Condensed*/
+    font-family:segoe UI Verdana, Geneva, Tahoma, sans-serif;
+}
+/* ===== HERO ===== */
+.hero {
+    position: relative;
+    background: linear-gradient(135deg, #c48160 0%, #b07553 40%, #c15b28 100%);
+    color: #fdf6ec;
+    text-align: center;
+    padding: 80px 20px 60px;
+
+    border-radius: 12px;
+}
+nav{
+    text-align: right;
+}
+.toolbar {
+    border: 1px solid #ccc;    
+    width: 100%;                  /* full width for better usability */
+    position: sticky;
+    top: 0;
+    background-color: rgb(249, 255, 253);
+    padding: 10px;                /* breathing room */
+    box-shadow: 5px 2px 18px rgba(0,0,0,0.1); /* subtle shadow */
+    border-radius: 12px;             /* stays above other content */
+    margin-right: 12px;
+}
+
+.toolbar a {
+    text-decoration: none; /* it will remove the undernlineing*/
+    color: #333;
+    font-weight: bold;
+    padding: 6px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.toolbar a:hover {
+    background-color: #007bff;   /* highlight on hover */
+    color: #ffffff;
+    box-shadow: 5px 2px 30px rgba(0,0,0,0.1);
+}
+
+#telengana{
+   float: left;
+   padding: 20px;
+}
+.breif{
+    margin-left: 30px;
+    margin-right: 30px;
+    background-color: rgb(210, 181, 237);
+    border-radius: 20px;
+    box-shadow: 2px 2px 15px rgb(69, 67, 67);
+}
+#breif{
+    color: rgb(51, 24, 1);
+    font-size: 19px;
+    font-weight:lighter;    
+}
+.breif:hover{
+    box-shadow: 2px 2px 15px rgb(0, 0, 0);
+    background-color:  rgb(206, 167, 241);
+}   
+.card{
+    padding: 24px;
+}
+.history{
+    margin-left: 30px;
+    margin-right: 30px;
+    background-color:  rgb(239, 233, 184);
+    border-radius: 20px;
+    box-shadow: 2px 2px 15px rgb(69, 67, 67);
+    padding: 12px;
+}
+.history:hover
+{
+    box-shadow: 2px 2px 15px rgb(0, 0, 0);
+    background-color:   rgb(224, 217, 162);
+}
+#dewali{
+    float: left;
+    padding:12px;
+    border-radius: 12px;
+}
+.culture{
+    margin-left: 30px;
+    margin-right: 30px;
+    background-color:  rgb(208, 238, 182);
+    border-radius: 20px;
+    box-shadow: 2px 2px 15px rgb(69, 67, 67);
+
+}
+.culture:hover
+{   
+    box-shadow: 2px 2px 15px rgb(0, 0, 0);
+    background-color:   rgb(183, 213, 157);
+}
+.img2{
+    width: 100%;
+    /*overflow-x: auto;*/
+    display: flex;
+    gap:1em;
+    padding: 45px;
+}
+#fall{
+    float: left;
+    padding: 23px;
+}
+.pop_c{
+    margin-left: 35px;
+    margin-right: 35px;
+    background-color:  rgb(248, 176, 176);
+    border-radius: 20px;
+    box-shadow: 2px 2px 15px rgb(69, 67, 67);
+    padding: 12px;
+}
+.pop_c:hover
+{   
+    box-shadow: 2px 2px 15px rgb(0, 0, 0);
+    background-color:   rgb(240, 161, 153);
+}
+.img3{
+    width: 100%;
+    overflow-x: auto;
+    display: flex;
+    padding: 23px;
+    gap:1em;
+}
+.politics{
+    margin-left: 30px;
+    margin-right: 30px;
+    background-color:  rgb(109, 95, 95);
+    border-radius: 20px;
+    padding: 19px;
+    box-shadow: 2px 2px 15px rgb(69, 67, 67);
+
+}
+.politics:hover
+{   
+    box-shadow: 2px 2px 15px rgb(0, 0, 0);
+    background-color:   rgb(83, 74, 75);
+}
+.img4{
+    width: 100%;
+    overflow-x: auto;
+    padding: 23px;
+    display: flex;
+    gap:1em;
+}
+.lines{
+    text-align: left;
+}
+.tourist{
+    margin-left: 30px;
+    margin-right: 30px;
+    background-color:  rgb(177, 218, 228);
+    border-radius: 20px;
+    box-shadow: 2px 2px 15px rgb(69, 67, 67);
+
+}
+.tourist:hover
+{   
+    box-shadow: 2px 2px 15px rgb(0, 0, 0);
+    background-color:    rgb(149, 219, 236);
+}
+    .img9{
+    width: 100%;
+    overflow-x: auto;
+    display: flex;
+    gap:1em;
+}
+/*starbuck-2011*/
+.pol{
+    padding: 12px;
+    border-radius:43px;
+}
+
+.breif, .history, .culture, .tourist, .pop_c, .politics {
+    margin-bottom: 20px;
+}
+.img1, .img2, .img3, .img9 {
+    margin-top: 23px;
+    padding: 10px;
+}
+
+.img1 img, .img2 img, .img3 img, .img9 img {
+    border-radius: 19px;
+}
+.breif, .culture, .tourist {
+    padding: 34px;
+}
