@@ -1,195 +1,323 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap');
 body{
-    background-color: rgb(255, 255, 255);
-    /*Segoe UI Variable Small Semibol
-    Gill Sans Ultra Bold Condensed*/
-    font-family:segoe UI Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(189, 237, 193);
 }
-/* ===== HERO ===== */
-.hero {
-    position: relative;
-    background: linear-gradient(135deg, #c48160 0%, #b07553 40%, #c15b28 100%);
-    color: #fdf6ec;
+.intro img{
+    float: left;
+    width: 200px;
+    border-radius: 300px;
+    padding: 12px;
+}
+.intro{
+    margin-right: 120px;
     text-align: center;
-    padding: 80px 20px 60px;
-
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: larger;
+    background-color: rgb(226, 126, 126);
+    padding: 8px;
     border-radius: 12px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 25px;
 }
-nav{
-    text-align: right;
+#button{
+    color: azure;
+    background-color: rgb(16, 16, 16);
+    text-align: center;
+    border-radius: 12px;
+    font-size: large;
+    padding: 12px;
 }
-.toolbar {
-    border: 1px solid #ccc;    
-    width: 100%;                  /* full width for better usability */
+.toolbar
+{
+    border: 1px solid #ccc;
+    padding: 12px;
     position: sticky;
-    top: 0;
-    background-color: rgb(249, 255, 253);
-    padding: 10px;                /* breathing room */
-    box-shadow: 5px 2px 18px rgba(0,0,0,0.1); /* subtle shadow */
-    border-radius: 12px;             /* stays above other content */
-    margin-right: 12px;
+    top:0;
+    background-color: rgb(236, 226, 226);
+    padding: 10px;
+    box-shadow: 5px 2px 18px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    margin-right: 50px;
+    margin-left: 50px;
+    z-index: 100;
 }
-
 .toolbar a {
-    text-decoration: none; /* it will remove the undernlineing*/
+    text-decoration: none;
     color: #333;
     font-weight: bold;
     padding: 6px 12px;
     border-radius: 4px;
-    transition: background-color 0.3s, color 0.3s;
+    transition: background-color 1.3s, color 1.3s;
 }
-
 .toolbar a:hover {
-    background-color: #007bff;   /* highlight on hover */
-    color: #ffffff;
-    box-shadow: 5px 2px 30px rgba(0,0,0,0.1);
+    background-color: #007bff;
+    box-shadow: 5px 2px 30px rgba(0, 0, 0, 0.1);
 }
-
+.topics-box {
+    border-radius: 12px;
+    background-color: rgb(202, 245, 245);
+    padding: 2px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 #telengana{
-   float: left;
-   padding: 20px;
+    padding: 7px;
+    border-radius: 30px;
+    margin: 0.1px;
+    float: right;
 }
-.breif{
-    margin-left: 30px;
-    margin-right: 30px;
+.middle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.breif {
+    font-size: large;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 20px 50px;
     background-color: rgb(210, 181, 237);
     border-radius: 20px;
-    box-shadow: 2px 2px 15px rgb(69, 67, 67);
+    box-shadow: 2px 2px 15px rgb(34, 34, 34);
+    padding: 12px 24px;
 }
-#breif{
-    color: rgb(51, 24, 1);
-    font-size: 19px;
-    font-weight:lighter;    
+.tourist{
+    margin: 12px;
+    padding-left: 2px;
+    padding: 12px;
+    background-color: aliceblue;
+    border-radius: 20px;
+    box-shadow: 2px 2px 15px rgb(34, 34, 34);
 }
-.breif:hover{
-    box-shadow: 2px 2px 15px rgb(0, 0, 0);
-    background-color:  rgb(206, 167, 241);
-}   
-.card{
-    padding: 24px;
+.tourist ul {
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+    display:grid;
 }
-.history{
-    margin-left: 30px;
-    margin-right: 30px;
-    background-color:  rgb(239, 233, 184);
+.t-images {
+    display: flex;
+    gap: 10px;
+    padding: 10px 0 0 0;
+    overflow-x: auto;
+}
+.t-card {
+    position: relative;
+    border-radius: 32px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+.t-card img {
+    height: 200px;
+    width: 260px;
+    padding: 15px;
+    border-radius: 32px;
+    display: block;
+    transition: filter 0.3s, transform 0.3s;
+}
+.t-card:hover img {
+    filter: brightness(0.25);
+    transform: scale(1.05);
+}
+.t-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.t-card:hover .t-overlay {
+    opacity: 10;
+}
+.t-overlay p {
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+    padding: 0 10px;
+}
+.tourist-top {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+.side-img {
+    width: 500px;
+    border-radius: 12px;
+    height: 320px;
+    flex-shrink: 0;
+}
+.culture{
+    margin-left: 12px;
+    margin-right: 12px;
+    background-color:  rgb(228, 235, 201);
     border-radius: 20px;
     box-shadow: 2px 2px 15px rgb(69, 67, 67);
     padding: 12px;
+    font-size: larger;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.culture:hover
+{
+    box-shadow: 2px 2px 15px rgb(0, 0, 0);
+    background-color:   rgb(245, 248, 209);
+}
+/*cultural images*/
+.c-images img
+{
+    height: 200px;
+    width: 260px;
+    padding: 15px;
+    border-radius: 32px;
+    transition: transform 0.3s;
+}
+.c-images img:hover {
+    transform: scale(1.05);
+}
+.c-card {
+    position: relative;
+    border-radius: 32px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+.c-card img {
+    height: 200px;
+    width: 260px;
+    padding: 15px;
+    border-radius: 32px;
+    display: block;
+    transition: filter 0.3s, transform 0.3s;
+}
+.c-card:hover img {
+    filter: brightness(0.25);
+    transform: scale(1.05);
+}
+.c-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 1.3s;
+}
+.c-card:hover .c-overlay {
+    opacity: 1;
+}
+.c-overlay p {
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+    padding: 0 10px;
+}
+.c-images {
+    display: flex;
+    gap: 10px;
+    padding: 10px 0 0 0;
+}
+
+.history{
+    margin-left: 12px;
+    margin-right: 12px;
+    background-color:  rgb(196, 235, 234);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border-radius: 20px;
+    box-shadow: 2px 2px 15px rgb(69, 67, 67);
+    padding: 12px;
+    font-size: larger;
 }
 .history:hover
 {
     box-shadow: 2px 2px 15px rgb(0, 0, 0);
-    background-color:   rgb(224, 217, 162);
+    background-color:   rgb(212, 243, 233);
 }
-#dewali{
-    float: left;
-    padding:12px;
+.img1 {
+    display: flex;
+    gap: 10px;
+    padding: 10px 0 0 0;
+}
+.img1 .t-card img {
+    width: 260px;
+    padding: 15px;
+    border-radius: 32px;
+    display: block;
+    transition: filter 0.3s, transform 0.3s;
+}
+.img1 .t-card:hover img {
+    filter: brightness(0.25);
+    transform: scale(1.05);
+}
+
+.cuisine{
+    margin-left: 12px;
+    margin-right: 12px;
+    background-color:  rgb(247, 239, 239);
+    border-radius: 20px;
+    box-shadow: 2px 2px 15px rgb(69, 67, 67);
+    padding: 12px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: larger;
+}
+.cuisine:hover
+{
+    box-shadow: 2px 2px 15px rgb(0, 0, 0);
+    background-color:   rgb(255, 255, 255);
+}
+.img3 {
+    display: flex;
+    gap: 10px;
+    padding: 10px 0 0 0;
+}
+.img3 .t-card img {
+    height: 200px;
+    width: 260px;
+    padding: 15px;
+    border-radius: 32px;
+    display: block;
+    transition: filter 0.3s, transform 0.3s;
+}
+.img3 .t-card:hover img {
+    filter: brightness(0.25);
+    transform: scale(1.05);
+}
+.politics {
+    display: flex;
+    flex-wrap: wrap; /* allows wrapping on smaller screens */
+    justify-content: space-around;
+    align-items: flex-start;
+    margin: 12px;
+    background-color: rgb(247, 239, 239);
+    border-radius: 20px;
+    box-shadow: 2px 2px 15px rgb(69, 67, 67);
+    padding: 20px;
+    font-size: larger;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    gap: 20px; /* spacing between sections */
+}
+
+.timeline {
+    flex: 1;
+    min-width: 300px;
+}
+
+.text {
+    flex: 2;
+    min-width: 350px;
+}
+
+.leaders {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.pol {
     border-radius: 12px;
-}
-.culture{
-    margin-left: 30px;
-    margin-right: 30px;
-    background-color:  rgb(208, 238, 182);
-    border-radius: 20px;
-    box-shadow: 2px 2px 15px rgb(69, 67, 67);
-
-}
-.culture:hover
-{   
-    box-shadow: 2px 2px 15px rgb(0, 0, 0);
-    background-color:   rgb(183, 213, 157);
-}
-.img2{
-    width: 100%;
-    /*overflow-x: auto;*/
-    display: flex;
-    gap:1em;
-    padding: 45px;
-}
-#fall{
-    float: left;
-    padding: 23px;
-}
-.pop_c{
-    margin-left: 35px;
-    margin-right: 35px;
-    background-color:  rgb(248, 176, 176);
-    border-radius: 20px;
-    box-shadow: 2px 2px 15px rgb(69, 67, 67);
-    padding: 12px;
-}
-.pop_c:hover
-{   
-    box-shadow: 2px 2px 15px rgb(0, 0, 0);
-    background-color:   rgb(240, 161, 153);
-}
-.img3{
-    width: 100%;
-    overflow-x: auto;
-    display: flex;
-    padding: 23px;
-    gap:1em;
-}
-.politics{
-    margin-left: 30px;
-    margin-right: 30px;
-    background-color:  rgb(109, 95, 95);
-    border-radius: 20px;
-    padding: 19px;
-    box-shadow: 2px 2px 15px rgb(69, 67, 67);
-
-}
-.politics:hover
-{   
-    box-shadow: 2px 2px 15px rgb(0, 0, 0);
-    background-color:   rgb(83, 74, 75);
-}
-.img4{
-    width: 100%;
-    overflow-x: auto;
-    padding: 23px;
-    display: flex;
-    gap:1em;
-}
-.lines{
-    text-align: left;
-}
-.tourist{
-    margin-left: 30px;
-    margin-right: 30px;
-    background-color:  rgb(177, 218, 228);
-    border-radius: 20px;
-    box-shadow: 2px 2px 15px rgb(69, 67, 67);
-
-}
-.tourist:hover
-{   
-    box-shadow: 2px 2px 15px rgb(0, 0, 0);
-    background-color:    rgb(149, 219, 236);
-}
-    .img9{
-    width: 100%;
-    overflow-x: auto;
-    display: flex;
-    gap:1em;
-}
-/*starbuck-2011*/
-.pol{
-    padding: 12px;
-    border-radius:43px;
-}
-
-.breif, .history, .culture, .tourist, .pop_c, .politics {
-    margin-bottom: 20px;
-}
-.img1, .img2, .img3, .img9 {
-    margin-top: 23px;
-    padding: 10px;
-}
-
-.img1 img, .img2 img, .img3 img, .img9 img {
-    border-radius: 19px;
-}
-.breif, .culture, .tourist {
-    padding: 34px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
 }
